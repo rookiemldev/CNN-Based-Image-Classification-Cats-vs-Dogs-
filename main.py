@@ -3,11 +3,11 @@ from keras.layers import Conv2D,MaxPooling2D,Flatten,Dense
 import numpy as np
 
 #DataSet Manipulation
-X_train = np.loadtxt('input.csv', delimiter=',')
-Y_train = np.loadtxt('labels.csv', delimiter=',')
+X_train = np.loadtxt('datasets/input.csv', delimiter=',')
+Y_train = np.loadtxt('datasets/labels.csv', delimiter=',')
 
-X_test = np.loadtxt('input_test.csv', delimiter=',')
-Y_test = np.loadtxt('labels_test.csv', delimiter=',')
+X_test = np.loadtxt('datasets/input_test.csv', delimiter=',')
+Y_test = np.loadtxt('datasets/labels_test.csv', delimiter=',')
 
 X_train = X_train.reshape(len(X_train), 100, 100, 3)/255.0
 X_test = X_test.reshape(len(X_test), 100, 100, 3)/255.0
